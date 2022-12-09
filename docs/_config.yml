@@ -1,0 +1,8 @@
+theme: jekyll-theme-modernist
+show_downloads: true
+
+# google_analytics:[Your Google Analytics tracking ID]
+
+# Name of website
+title: myProjectTitle
+description: Project for UCLA ECEM202A/CSM213A (Fall 2021)
