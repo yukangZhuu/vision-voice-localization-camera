@@ -11,10 +11,7 @@ google_analytics: "UA-121636368-3"
 
 header:
   pages:
-    - name: Home
-      slug: /
-    - name: Required Submissions
-
+  
 footer:
   show_powered_by: false
   contact:
