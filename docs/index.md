@@ -17,7 +17,7 @@ Provide a brief overview of the project objhectives, approach, and results.
 
 ## Required Submissions
 
-* [Proposal](proposal)
+* [Proposal](/required_submissions/proposal)
 * [Midterm Checkpoint Presentation Slides](http://)
-* [Final Presentation Slides](http://)
-* [Final Report](report)
+* [Final Presentation Slides](https://docs.google.com/presentation/d/1RKPuauXq2WHstac2NXcDObfHhL_HTxChkY55MqqV0LE/edit?usp=sharing)
+* [Final Report](/required_submissions/report)
