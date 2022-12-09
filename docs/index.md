@@ -5,10 +5,20 @@ profile_picture:
   alt: website picture
 ---
 
-<p>
-  Welcome! This site serves as an example for the Bay Jekyll theme. Bay is a very simple and minimal theme, directly inspired by Dan Grover's <a href="http://dangrover.com">website</a>.
-</p>
 
-<p>
-  You can find the source code and the instructions on <a href="https://github.com/eliottvincent/bay">GitHub</a>.
-</p>
+# Abstract
+
+Provide a brief overview of the project objhectives, approach, and results.
+
+# Team
+
+* Name of team member \#1 
+* Name of team member \#2 (delete this if necessary)
+* Name of team member \#3 (delete this if necessary)
+
+# Required Submissions
+
+* [Proposal](proposal)
+* [Midterm Checkpoint Presentation Slides](http://)
+* [Final Presentation Slides](http://)
+* [Final Report](report)
