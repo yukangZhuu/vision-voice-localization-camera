@@ -4,8 +4,8 @@
 title: Vision & Voice Localization Camera
 description: >- # this means to ignore newlines until "baseurl:"
   This is a project page for UCLA ECE M202A final project.
-baseurl: "/bay" # the subpath of the site
-url: "https://eliottvincent.github.io" # the base hostname & protocol for the site
+baseurl: "/vision-voice-localization-camera" # the subpath of the site
+url: "https://yukangzhuu.github.io" # the base hostname & protocol for the site
 og_image: /assets/img/profile-pic.jpg
 google_analytics: "UA-121636368-3"
 
