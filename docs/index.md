@@ -6,17 +6,17 @@ profile_picture:
 ---
 
 
-# Abstract
+## Abstract
 
 Provide a brief overview of the project objhectives, approach, and results.
 
-# Team
+## Team
 
 * Name of team member \#1 
 * Name of team member \#2 (delete this if necessary)
 * Name of team member \#3 (delete this if necessary)
 
-# Required Submissions
+## Required Submissions
 
 * [Proposal](proposal)
 * [Midterm Checkpoint Presentation Slides](http://)
