@@ -21,3 +21,8 @@ Our ECE M202A final project aims to develop a vision and voice localization came
 * [Midterm Checkpoint Presentation Slides](https://docs.google.com/presentation/d/1WhPNio2JmzOJIWCwAPVxncb2pV9Yoq5bz2z9mT50DZg/edit?usp=sharing)
 * [Final Presentation Slides](https://docs.google.com/presentation/d/1RKPuauXq2WHstac2NXcDObfHhL_HTxChkY55MqqV0LE/edit?usp=sharing)
 * [Final Report](required_submissions/report.md)
+
+## Other Links
+
+* [Final Demo Video](https://)
+* [Github Repository]([https://](https://github.com/yukangZhuu/vision-voice-localization-camera))
