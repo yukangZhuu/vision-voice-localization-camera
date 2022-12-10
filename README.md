@@ -1,4 +1,4 @@
-# Vision & Voice Localization Cmera
+# Vision & Voice Localization Camera
 
 This is a repository for UCLA ECEM202A / CSM213A projects.
 
