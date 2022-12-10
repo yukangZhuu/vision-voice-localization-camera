@@ -1,6 +1,6 @@
 # Vision & Voice Localization Camera
 
-This is a repository for UCLA ECEM202A / CSM213A projects.
+This is a repository for UCLA ECEM202A / CSM213A project by Yukang Zhu and Hanyi Duan.
 
 Check out the presentation web page [here](https://yukangzhuu.github.io/vision-voice-localization-camera/)!
 
