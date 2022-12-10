@@ -29,7 +29,7 @@ This section should cover the following items:
 
 ## A. Overview
 
-Figure 3.1 shows the overview of the system structure of our device. The device has two kinds of inputs: vision input by the PC camera and sound input by the Respeaker module, which are respectively sampled for human detection and sound source localization. For the sound source localization part, the sound signal is first sampled by the 4-microphone array of the Respeaker module, then the microphone data is transmitted to Raspberry Pi Zero, where the data is analyzed and the direction of the sound is obtained and finally goes to the central controller (PC) through serial communication. On the other hand, the PC will also process the vision data collected by its camera and conduct human detection. Finally, the result of the fusion of vision and voice localization will be presented by the PC in real-time.
+Figure 3.1 shows the overview of the system structure of our device. The device has two kinds of inputs: vision input by the PC camera and sound input by the Respeaker module, which are respectively sampled for human detection and sound source localization. For the sound source localization part, the sound signal is first sampled by the 4-microphone array of the Respeaker module, then the microphone data is transmitted to Raspberry Pi Zero, where the data is analyzed and the direction of the sound is obtained and finally goes to the central controller (PC) through serial communication. On the other hand, the PC will also process the vision data collected by its camera and conduct human detection. Finally, the result of the fusion of human and voice localization will be presented by the PC in real-time.
 
 <center>
     <img style="border-radius: 0.3125em;
@@ -49,8 +49,10 @@ Three main technical approaches utilized in our project will be illustrated in d
 
 ## B. Human Detection
 
+
+
 ## C. Sound Source (Voice) Localization
-Sound Source (or Voice) Localization is another key technical approach in this project. We utilized two algorithms to realize Voice Localization for our device, which are Voice Activity Detection (VAD) and Direction of Arrival (DOA) Estimation.
+Sound Source (or Voice) Localization is another key technical approach in this project. To realize Voice Localization for our device, We utilized two algorithms which are Voice Activity Detection (VAD) and Direction of Arrival (DOA) Estimation. As shown in Figure 3.4, the microphone data sampled by the Respeaker is sent to Raspberry Pi in the form of 4 channels, these data will first be processed by VAD, which is basically used to classify whether the audio signal is human voice or not. Specifically, in our project, only when there are more than 2 channels recognized as voice can this data set of 4 channels be allowed to go to the next step, which is DoA estimation. Particularly, DoA in our project is simply implemented by calculating the difference of 4 channels' sound-source-target distance, which is mainly achieved by estimating the time offset difference of the signals from the 4 channels. Once we obtain the distance difference, the direction angle can be derived by simple geometry and mathematics.
 
 <center>
     <img style="border-radius: 0.3125em;
@@ -66,7 +68,7 @@ Sound Source (or Voice) Localization is another key technical approach in this p
   	</div>
 </center>
 
-Practically, in our project, the VAD is implememted by python library webrtcvad and DoA is supported by the Respeaker itself.
+Practically, in our project, the VAD is implememted by python library webrtcvad and DoA is supported by the Respeaker with particular python libraries that can be run on Raspberry Pi Zero.
 
 
 
