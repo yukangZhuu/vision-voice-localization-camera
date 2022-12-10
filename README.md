@@ -1,10 +1,11 @@
-# ecem202a_project
-This is repository template for UCLA ECEM202A / CSM213A projects.
+# Vision & Voice Localization Cmera
 
-Use the folders as follows:
+This is a repository for UCLA ECEM202A / CSM213A projects.
 
-* doc/ for website content
-* software/ for code used in your project
-* data/ for data data used in your project
+Check out the presentation web page [here](https://yukangzhuu.github.io/vision-voice-localization-camera/)!
 
-You may add additional folders as necessary.
+Folders in this repository are used as:
+* doc/ for presentastion website content
+* software/ for code used in our project
+* data/ for data used in our project
+
