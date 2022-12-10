@@ -25,4 +25,4 @@ Our ECE M202A final project aims to develop a vision and voice localization came
 ## Other Links
 
 * [Final Demo Video](https://)
-* [Github Repository]([https://](https://github.com/yukangZhuu/vision-voice-localization-camera))
+* [Github Repository](https://github.com/yukangZhuu/vision-voice-localization-camera)
