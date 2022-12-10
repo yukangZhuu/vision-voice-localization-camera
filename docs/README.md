@@ -1,6 +1,6 @@
 # Vision & Voice Localization Camera
 
-This the source code for the presentation web page of our project.
+This is the source code for the presentation web page of our project.
 
 Check out the web page [here](https://yukangzhuu.github.io/vision-voice-localization-camera/)
 
