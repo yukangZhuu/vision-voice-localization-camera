@@ -26,16 +26,16 @@ This section should cover the following items:
 # 2. Related Work
 
 # 3. Technical Approach
-Figure 3.1 shows the overview of the system structure of our device. The device has two kinds of inputs: vision input by laptop camera and sound input by Respeaker module, which are respectively sampled for human detection and sound source localization. For sound source localization part, the sound signal is first sampled by the 4-microphone array of the Respeaker module, then the microphone data is transmitted to Raspberry Pi Zero, where the data is analyzed and the 
 
+## A. Overview
 
-And three main technical approach utilized in our project will be illustrated in details in the following sections.
+Figure 3.1 shows the overview of the system structure of our device. The device has two kinds of inputs: vision input by the PC camera and sound input by the Respeaker module, which are respectively sampled for human detection and sound source localization. For the sound source localization part, the sound signal is first sampled by the 4-microphone array of the Respeaker module, then the microphone data is transmitted to Raspberry Pi Zero, where the data is analyzed and the direction of the sound is obtained and finally goes to the central controller (PC) through serial communication. On the other hand, the PC will also process the vision data collected by its camera and conduct human detection. Finally, the result of the fusion of vision and voice localization will be presented by the PC in real-time.
 
 <center>
     <img style="border-radius: 0.3125em;
     box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
     width = "300" height = "200"
-    src="../media/figure3.1.png" width = "100%" alt=""/>
+    src="../media/figure3.1.png" width = "92%" alt=""/>
     <br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
@@ -44,6 +44,14 @@ And three main technical approach utilized in our project will be illustrated in
       Figure 3.1 System Structure Overview
   	</div>
 </center>
+
+Three main technical approach utilized in our project will be illustrated in details in the following sections.
+
+## B. Human Detection
+
+## C. Sound Source (Voice) Localization
+
+## D. A Queue-based Multi-sound-source Localization Method
 
 
 # 4. Evaluation and Results
