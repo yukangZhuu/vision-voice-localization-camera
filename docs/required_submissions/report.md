@@ -9,7 +9,7 @@
 
 # Abstract
 
-Provide a brief overview of the project objhectives, approach, and results.
+This project aims to develop a vision and voice localization camera which can not only detect humans in a camera frame but also localize sound sources to track the person who is talking. In particular, we leverage YOLOv5 to conduct human detection and multiple algorithms like Voice Activity Detection (VAD) and Direction of Arrival (DoA) Estimation are utilized to realize sound source (voice) localization. The device was finally developed with a laptop, a Raspberry Pi Zero, and a Respeaker 4-Mic Array, in which the laptop serves as a central controller as well as the human detection part and the combination of Raspberry Pi and Respeaker is responsible for sound source localization. The evaluation results show that our vision and voice localization camera has good performance in accuracy and latency with respect to human detection and voice localization. The device also works well in multi-person and multi-sound-source scenarios.
 
 # 1. Introduction
 
@@ -26,6 +26,9 @@ This section should cover the following items:
 # 2. Related Work
 
 # 3. Technical Approach
+
+
+
 
 # 4. Evaluation and Results
 
