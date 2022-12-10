@@ -24,5 +24,5 @@ This is a presentation for UCLA ECE M202A final course project. Our project aims
 
 ## Other Links
 
-* [Final Demo Video](https://)
+* [Final Demo Video](https://www.youtube.com/watch?v=_rtZ4ykac9A)
 * [Github Repository](https://github.com/yukangZhuu/vision-voice-localization-camera)
