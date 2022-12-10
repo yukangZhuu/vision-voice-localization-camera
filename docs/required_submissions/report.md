@@ -107,11 +107,26 @@ Figure 4.1 presents the final setup of the vision and voice localization camera 
   	</div>
 </center>
 
-To evaluate the performance of this device, 
+To evaluate the performance of this device, 3 kinds of tests are designed: conversations, multiple sound sources at the same time, and discernibility. Conversations are the most common scenario for the device in real life use. In our testing, we set two persons in the camera frame and let them talk freely with daily conversations. Figure 4.2 shows one screenshot of the testing, in which all persons in the camera are be detected by frames, and the person that is talking is highlited. Another testing is aimed to evaluate the multi-sound-source localization ability, in which we let two persons talking in the same time and assess the stability and accuracy of the detection. The last tesing is about the discernibility, that is, the minumum direction angle difference for two persons in the camera to have, in order to avoid aliasing or confusion of the human & voice localization.
 
+Figure 4.1 presents the final setup of the vision and voice localization camera for testing.
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    width = "300" height = "200"
+    src="../media/figure4.2.jpg" width = "90%" alt=""/>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">
+      Figure 4.2 A Screenshot of One of the Tesing Scenarios  
+  	</div>
+</center>
 
-(A complete testing demo video has been uploaded to Yutube, check out the link on the Home page or just click [here](https://))
+(For details, check out the testing video uploaded to Youtube, find the link on the Home page or just click [here](https://))
 
+Tesing results are 
 
 # 5. Discussion and Conclusions
 
