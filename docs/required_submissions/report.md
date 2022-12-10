@@ -45,11 +45,30 @@ Figure 3.1 shows the overview of the system structure of our device. The device 
   	</div>
 </center>
 
-Three main technical approach utilized in our project will be illustrated in details in the following sections.
+Three main technical approaches utilized in our project will be illustrated in details in the following sections.
 
 ## B. Human Detection
 
 ## C. Sound Source (Voice) Localization
+Sound Source (or Voice) Localization is another key technical approach in this project. We utilized two algorithms to realize Voice Localization for our device, which are Voice Activity Detection (VAD) and Direction of Arrival (DOA) Estimation.
+
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    width = "300" height = "200"
+    src="../media/figure3.4.png" width = "92%" alt=""/>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">
+      Figure 3.4 Voice Localization Framework of Our Device
+  	</div>
+</center>
+
+Practically, in our project, the VAD is implememted by python library webrtcvad and DoA is supported by the Respeaker itself.
+
+
 
 ## D. A Queue-based Multi-sound-source Localization Method
 
