@@ -91,9 +91,27 @@ Armed with Voice Localization by VAD and DoA, the combination of Respeaker and R
 
 In our project, the data rate of the serial communicaiton between central controller and Raspberry Pi is 0.1 second per direction angle. The core concept of the queue-based multi-sound-source localization is to utilize a FIFO queue with a size of 4 to store the angles coming from the Raspberry Pi, and the angles in the queue are also checked every 0.1 second, considered as the directions that are now  giving voice. By doing so, we can allow at most 4 different voice sources simultaneously (in an ideal scenario), and also stabilize the detection. However, it's also obvious that this queue-based mechanism will cause a detection trailing, because every angle will at least stay in the queue for 0.4 second. 
 
-
-
 # 4. Evaluation and Results
+Figure 4.1 presents the final setup of the vision and voice localization camera for testing.
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    width = "300" height = "200"
+    src="../media/figure4.1.jpg" width = "85%" alt=""/>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">
+      Figure 4.1 Setup of the Device for Testing
+  	</div>
+</center>
+
+To evaluate the performance of this device, 
+
+
+(A complete testing demo video has been uploaded to Yutube, check out the link on the Home page or just click [here](https://))
+
 
 # 5. Discussion and Conclusions
 
