@@ -123,12 +123,25 @@ To evaluate the performance of this device, 3 kinds of tests are designed: conve
   	</div>
 </center>
 
+According to tesing results, our vision & voice localization camera shows overall good performance against the above 3 kinds of tests. In conversation test, the device can detect the talking person within small latency and satisfactory accuracy. For multiple sound sources test, the device worked well with a simultaneous two-person-talking scenario, and the display trailing caused by the queue-based method is tolerable.In discernibility test, minumum angle seperation to avoid aliasing is 24.5°, which is efficient within a 71.67° camera we use. This threshold is shown in Figure 4.3. We also had a simple test for movement, and the device can operate normally for a person moving in a slow pattern.
+
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    width = "300" height = "200"
+    src="../media/figure4.3.png" width = "90%" alt=""/>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">
+      Figure 4.3 Discernibility Test: The Minumum Angle Seperation to Avoid Aliasing 
+  	</div>
+</center>
+
+It's relatively hard to measure and present sufficient quantified tesing results for our real-time camera device, so for details, please check out the testing video uploaded to Youtube, find the link on the Home page or just click [here](https://www.youtube.com/watch?v=_rtZ4ykac9A).
 
 
-
-For details, check out the testing video uploaded to Youtube, find the link on the Home page or just click [here](https://www.youtube.com/watch?v=_rtZ4ykac9A).
-
-Tesing results are 
 
 # 5. Discussion and Conclusions
 
