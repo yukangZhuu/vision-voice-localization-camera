@@ -73,13 +73,13 @@ Practically, in our project, the VAD is implememted by python library webrtcvad 
 
 
 ## D. A Queue-based Multi-sound-source Localization Method
-
+Armed with Voice Localization by VAD and DoA, the combination of Respeaker and Raspberry Pi can easily detect the direction of single sound source with reasonable error and latency. However, when there are multiple sound sources in the camera frame at the same time, it becomes challenging for the module to stably output precise directions, since Respeaker and Raspberry Pi can only detect and generate one direction angle at a time. To solve this dilemma, we proposed a queue-based multi-sound-source localization method to help central controller correctly handle the direction angles coming from Raspberry Pi. Figure 3.5 presents the framework of the proposed method.
 
 <center>
     <img style="border-radius: 0.3125em;
     box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
     width = "300" height = "200"
-    src="../media/figure3.5.png" width = "92%" alt=""/>
+    src="../media/figure3.5.png" width = "85%" alt=""/>
     <br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
@@ -88,6 +88,8 @@ Practically, in our project, the VAD is implememted by python library webrtcvad 
       Figure 3.5 Queue-based Multiple Sound Sources Localization Framework
   	</div>
 </center>
+
+
 
 
 # 4. Evaluation and Results
