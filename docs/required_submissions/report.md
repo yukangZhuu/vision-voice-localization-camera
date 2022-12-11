@@ -13,29 +13,11 @@ This project aims to develop a vision and voice localization camera which can no
 
 # 1. Introduction
 
-As an important sub-branch of speech recognition, audio-visual automatic speech recognition (A/V ASR) [1] [2] has been studied a lot recently to deal with the scenario where multiple people are simultaneously on screen. In addition to voice signal that is neccessary for tradditional speech recognition, A/V ASR takes great benefits from the addition of visual signal contained in a video where the speakers' faces show. To achieve high performance in speech recognition with a visual scene of more than one speakers, A/V ASR also requires solving the active speaker detection (ASD) problem, which means deciding which of the visible faces relates to the voice at each moment [3]. Traditional ASD requires short-term or long-term audio and visual information to accurately extract features of different speakers [4], which may require complex modeling and time-costing training to achieve satisfactory performance in a real-time scenario. 
+As an important sub-branch of speech recognition, audio-visual automatic speech recognition (A/V ASR) [1] [2] has been studied a lot recently to deal with the scenario where multiple people are simultaneously on the screen. In addition to the voice signal that is necessary for traditional speech recognition, A/V ASR takes great benefits from the addition of visual signal contained in a video where the speakers' faces show. To achieve high performance in speech recognition with a visual scene of more than one speaker, A/V ASR also requires solving the active speaker detection (ASD) problem, which means deciding which of the visible faces relates to the voice at each moment [3]. Traditional ASD requires short-term or long-term audio and visual information to accurately extract features of different speakers [4], which may require complex modeling and time-costing training to achieve satisfactory performance in a real-time scenario. 
 
-To simplfy this active speaker detection problem, Our project proposes to substitude the ASD by changing the problem-solving time and stage: instead of conducting ASD to a completely recorded video, we can solve the "which person" dillema at the very moment when the video is been recorded by a camera. In particular, by combining human detection and sound source localization (SSL) in real-time, we can achieve ASD in a camera frame without complicated audio-visual feature extraction. Specifically, we aim to develop a vision & voice localization camera to leverage the fusion of human detection and voice directioning in real-time, so that it is able to hightlight the person that is giving voice, realizing a pre-stage active speaker detection.
+To simplify this active speaker detection problem, Our project proposes to substitute ASD by changing the problem-solving time and stage: instead of conducting ASD to a completely recorded video, we can solve the "which person" dilemma at the very moment when the video is been recorded by a camera. In particular, by combining human detection and sound source localization (SSL) in real-time, we can achieve ASD in a camera frame without complicated audio-visual feature extraction. Specifically, we aim to develop a vision & voice localization camera to leverage the fusion of human detection and voice directioning in real-time, so that it is able to highlight the person that is giving voice, realizing a pre-stage active speaker detection.
 
-The challenge of the vision & voice localization camera originates in two main technical approach mentioned above: human detection and sound source localization
-
-Another key assessment for our project is the performance in multi-person scenario. Whether the device can give a continuously stable stream of active speaker detection results is the main concern of this project. Correspondingly, we also developed a queue-based SSL mechanism to deal with the deficiency of the SSL part of the device in multi-sound-source scenario, which will be illustrated in detail in the technical approach section. Furthermore, aliasing and latency are also considered important metrics for the vision & voice localization camera
-
-
-To achieve ASD 
-
-
-This section should cover the following items:
-
-
-
-* Motivation & Objective: What are you trying to do and why? (plain English without jargon)
-* State of the Art & Its Limitations: How is it done today, and what are the limits of current practice?
-* Novelty & Rationale: What is new in your approach and why do you think it will be successful?
-* Potential Impact: If the project is successful, what difference will it make, both technically and broadly?
-* Challenges: What are the challenges and risks?
-* Requirements for Success: What skills and resources are necessary to perform the project?
-* Metrics of Success: What are metrics by which you would check for success?
+The challenge of the vision & voice localization camera originates in two main technical approaches mentioned above: human detection and sound source localization. For human detection, we introduced the popular vision AI YOLOv5, which is a family of well-trained compound-scaled object detection models. For SSL, we leveraged a 4-microphone array module named Respeaker to realize the required algorithms. Another key assessment for our project is the performance in the multi-person scenario. Whether the device can give a continuously stable stream of active speaker detection results is the main concern of this project. Correspondingly, we also developed a queue-based SSL mechanism to deal with the deficiency of the SSL part of the device in the multi-sound-source scenario, which will be illustrated in detail in the technical approach section. Furthermore, aliasing and latency are also considered important metrics for the vision & voice localization camera. To correctly conduct active speaker detection, the SSL of the device should have a relatively low minimum angular separation to maintain good discernibility and avoid detection aliasing. All the assessment mentioned above has been performed sufficiently in our project, and the detailed results are shown in Evaluation and Results.
 
 # 2. Related Work
 
