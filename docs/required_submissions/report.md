@@ -13,7 +13,17 @@ This project aims to develop a vision and voice localization camera which can no
 
 # 1. Introduction
 
+
+As an important sub-branch of speech recognition, audio-visual automatic speech recognition (A/V ASR) [1] [2] has been studied a lot recently to deal with the scenario where multiple people are simultaneously on screen. In addition to voice signal that is neccessary for tradditional speech recognition, A/V ASR takes great benefits from the addition of visual signal contained in a video where the speakers' faces show. To achieve high performance in speech recognition with a visual scene of more than one speakers, A/V ASR also requires solving the active speaker detection (ASD) problem, which means deciding which of the visible faces relates to the voice at each moment [3]. Traditional active speaker detection (ASD) requires short-term or long-term audio and visual information to accurately extract features of different speakers [4], which may require complex modeling and time-costing training to achieve satisfactory performance a in real-time scenario. 
+
+To simplfy this active speaker detection (ASD) problem, Our project proposes to substitude the ASD by changing the problem-solving stage: instead of conducting ASD to a completely recorded video, we can solve the "which person" dillema at the very moment when the video is been recorded by a camera. In particular, by combining human detection and sound source localization in in real-time, we can achieve ASD in a camera frame without complicated audio-visual feature extraction.
+
+
+
+
 This section should cover the following items:
+
+
 
 * Motivation & Objective: What are you trying to do and why? (plain English without jargon)
 * State of the Art & Its Limitations: How is it done today, and what are the limits of current practice?
@@ -146,3 +156,10 @@ It's relatively hard to measure and present sufficient quantified testing result
 # 5. Discussion and Conclusions
 
 # 6. References
+[1] O. Braga and O. Siohan, "A Closer Look at Audio-Visual Multi-Person Speech Recognition and Active Speaker Selection," ICASSP 2021 - 2021 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2021, pp. 6863-6867, doi: 10.1109/ICASSP39728.2021.9414160.
+
+[2] T. Afouras, J. S. Chung, A. Senior, O. Vinyals and A. Zisserman, "Deep Audio-Visual Speech Recognition," in IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 44, no. 12, pp. 8717-8727, 1 Dec. 2022, doi: 10.1109/TPAMI.2018.2889052.
+
+[3] O. Braga, T. Makino, O. Siohan and H. Liao, "End-to-End Multi-Person Audio/Visual Automatic Speech Recognition," ICASSP 2020 - 2020 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2020, pp. 6994-6998, doi: 10.1109/ICASSP40776.2020.9053974.
+
+[4] Ruijie Tao, Zexu Pan, Rohan Kumar Das, Xinyuan Qian, Mike Zheng Shou, and Haizhou Li. 2021. Is Someone Speaking? Exploring Long-term Temporal Features for Audio-visual Active Speaker Detection. In Proceedings of the 29th ACM International Conference on Multimedia (MM '21). Association for Computing Machinery, New York, NY, USA, 3927–3935.
