@@ -19,6 +19,7 @@ As an important sub-branch of speech recognition, audio-visual automatic speech 
 To simplfy this active speaker detection (ASD) problem, Our project proposes to substitude the ASD by changing the problem-solving stage: instead of conducting ASD to a completely recorded video, we can solve the "which person" dillema at the very moment when the video is been recorded by a camera. In particular, by combining human detection and sound source localization in in real-time, we can achieve ASD in a camera frame without complicated audio-visual feature extraction.
 
 
+To achieve ASD 
 
 
 This section should cover the following items:
