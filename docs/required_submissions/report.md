@@ -53,7 +53,7 @@ Figure 3.1 shows the overview of the system structure of our device. The device 
     <img style="border-radius: 0.3125em;
     box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
     width = "300" height = "200"
-    src="../media/figure3.1.png" width = "70%" alt=""/>
+    src="../media/figure3.1.png" width = "100%" alt=""/>
     <br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
@@ -73,7 +73,7 @@ Human detection is a key feature of this project. YOLOv5 is used for its high sp
     <img style="border-radius: 0.3125em;
     box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
     width = "300" height = "200"
-    src="../media/figure3.2.png" width = "80%" alt=""/>
+    src="../media/figure3.2.png" width = "68%" alt=""/>
     <br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
@@ -89,7 +89,7 @@ Angle calculation is needed because the output of the SSL is in angle. In order 
     <img style="border-radius: 0.3125em;
     box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
     width = "300" height = "200"
-    src="../media/figure3.3.png" width = "92%" alt=""/>
+    src="../media/figure3.3.png" width = "75%" alt=""/>
     <br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
@@ -106,7 +106,7 @@ Sound Source (or Voice) Localization is another key technical approach in this p
     <img style="border-radius: 0.3125em;
     box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
     width = "300" height = "200"
-    src="../media/figure3.4.png" width = "92%" alt=""/>
+    src="../media/figure3.4.png" width = "100%" alt=""/>
     <br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
@@ -127,7 +127,7 @@ Armed with Voice Localization by VAD and DoA, the combination of Respeaker and R
     <img style="border-radius: 0.3125em;
     box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
     width = "300" height = "200"
-    src="../media/figure3.5.png" width = "85%" alt=""/>
+    src="../media/figure3.5.png" width = "90%" alt=""/>
     <br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
