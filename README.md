@@ -15,10 +15,10 @@ This is a presentation for UCLA ECE M202A final course project. Our project aims
 
 ## Required Submissions
 
-* [Proposal](docs/required_submissions/proposal.md)
+* [Proposal](https://yukangzhuu.github.io/vision-voice-localization-camera/required_submissions/proposal.html)
 * [Midterm Checkpoint Presentation Slides](https://docs.google.com/presentation/d/1WhPNio2JmzOJIWCwAPVxncb2pV9Yoq5bz2z9mT50DZg/edit?usp=sharing)
 * [Final Presentation Slides](https://docs.google.com/presentation/d/1RKPuauXq2WHstac2NXcDObfHhL_HTxChkY55MqqV0LE/edit?usp=sharing)
-* [Final Report](docs/required_submissions/report.md)
+* [Final Report](https://yukangzhuu.github.io/vision-voice-localization-camera/required_submissions/report.html)
 
 ## Other Links
 
