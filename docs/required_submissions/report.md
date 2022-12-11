@@ -21,6 +21,28 @@ The challenge of the vision & voice localization camera originates in two main t
 
 # 2. Related Work
 
+The novelty of this project lies in the real-time integration of sound source localization (SSL) and human detection. To figure out the technical approach, related works on both sides are analyzed. 
+
+There are a number of choices for the human detector. Modern detectors usually have two parts: backbone and head. In the human detection of this project, only the head part is taken into account. There are two types of head: one-stage object detector and two-stage object detector. The most popular two-stage detector is the R-CNN series, while two of the state-of-the-art one-stage detectors are YOLOv4 (You Only Look Once) and EfficientDet. The comparison of the performances of several modern detectors is shown in Figure 2.1, showing that YOLOv4 runs fastest under comparable performance [5]. Another comparison is made within YOLOv3, YOLOv4, and YOLOv5, showing that YOLOv5 provides the best performance [6]. In the scenario of this project, higher speed is preferred than higher accuracy, thus YOLOv5 is used.
+
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    width = "300" height = "200"
+    src="../media/figure2.1.png" width = "92%" alt=""/>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">
+      Figure 2.1 Comparison of YOLOv4 and Other State-of-the-art Object Detectors
+  	</div>
+</center>
+
+One of the popular methods for SSL is the time difference of arrival (TDOA) through generalized cross-correlation (GCC). In this method, the accurate time differences between microphones in a microphone array will be measured using GCC, and such differences will be used to calculate the angles between microphones and the object, thus the position of the object is gained [7]. An alternative method is using TDOA with analog circuits to filter out noise frequencies [8]. In this project, a well-designed product ReSpeaker is used which is capable of SSL through both TDOA and noise cancellation.
+
+This project aims to highlight the person talking in a camera. There exists a product in the market called Meeting Owl 3 from Owl Labs that have a similar purpose. The product is placed in the middle of a meeting room, then it uses a 360° camera to record videos for everyone in the meeting room and zoom in on the people who are talking. The detailed algorithm and technical approach of this product are not released to the public; what is known is that it uses 8 Omni-directional beamforming Smart Mics for SSL and a differentiator for better performance [9]. Not knowing the algorithm but learning the idea from such a product, this project uses its unique SSL and human detection algorithm to make it work as expected. Other than the algorithm difference, this project uses an unchangeable camera view and highlights the humans using frames. 
+
 # 3. Technical Approach
 
 ## A. Overview
@@ -45,7 +67,37 @@ Three main technical approaches utilized in our project will be illustrated in d
 
 ## B. Human Detection
 
+Human detection is a key feature of this project. YOLOv5 is used for its high speed. Specifically, the model of YOLOv5s (small) is used as it has already provided enough accuracy. The color of the frame over each person in a camera is changed accordingly to represent the state of the person. If the person is not talking, the frame will be green; if the person is talking, the frame will be red. Other than that, the x-axis of each frame is exported from YOLOv5 for angle calculation as shown in Figure 3.2.
 
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    width = "300" height = "200"
+    src="../media/figure3.2.png" width = "92%" alt=""/>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">
+      Figure 3.2 YOLOv5 Human Detection and X-axis Value Output
+  	</div>
+</center>
+
+Angle calculation is needed because the output of the SSL is in angle. In order to compare the results of human detection with that of the SSL to decide the talking status, x-axis value needs to be converted to angle. The mathematical equation is calculated as shown in figure 3.3, where C refers to the camera's field of view and D refers to the human detection angle. In this project, C is measured to be 71.67°. The final equation is: D = arctan[(0.5-x)*tan(C/2)*2].
+
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    width = "300" height = "200"
+    src="../media/figure3.3.png" width = "92%" alt=""/>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">
+      Figure 3.3 YOLOv5 Angle Calculation Model
+  	</div>
+</center>
 
 ## C. Sound Source (Voice) Localization
 Sound Source (or Voice) Localization is another key technical approach in this project. To realize Voice Localization for our device, We utilized two algorithms which are Voice Activity Detection (VAD) and Direction of Arrival (DOA) Estimation. As shown in Figure 3.4, the microphone data sampled by the Respeaker is sent to Raspberry Pi in the form of 4 channels, these data will first be processed by VAD, which is basically used to classify whether the audio signal is human voice or not. Specifically, in our project, only when there are more than 2 channels recognized as voice can this data set of 4 channels be allowed to go to the next step, which is DoA estimation. Particularly, DoA in our project is simply implemented by calculating the difference of 4 channels' sound-source-target distance, which is mainly achieved by estimating the time offset difference of the signals from the 4 channels. Once we obtain the distance difference, the direction angle can be derived by simple geometry and mathematics.
@@ -137,9 +189,13 @@ According to the testing results, our vision & voice localization camera shows o
 
 It's relatively hard to measure and present sufficient quantified testing results for our real-time camera device, so for details, please check out the testing video uploaded to Youtube, find the link on the Home page, or just click [here](https://www.youtube.com/watch?v=_rtZ4ykac9A).
 
-
-
 # 5. Discussion and Conclusions
+
+As shown in the Evaluation and Results section, the performance of our device is good enough: the accuracies of recognizing, detecting, and localization are above expectation; the latencies and the trailing are tolerable. As a result, it is reasonable to conclude that this project works as expected.
+
+However, there still exist some limitations and constraints in this project. Firstly, the ReSpeaker (4-Mic array version) is not capable of high-precision SSL; thus it limits the accuracy of the whole system. As a result, if high precision is needed, such as a large number of people in the same camera frame, a more accurate module is required. Secondly, since the detecting distance limit of the ReSpeaker is 3 meters, the performance of the device cannot be guaranteed if the system is applied in large spaces or open areas. 
+
+There are possible improvements to this project as well. For instance, the system uses VAD to filter out unvoiced sound, but this function is not assessed statistically. Thus, this project would become more convincing if the denoising ability is well tested. Furthermore, the capability of detecting is not tested under the scenario in which people are moving fast. Other than that, some further steps can be taken based on this project. One example is to separate sound from the human voice and detect what object is making sounds. This might be done through VAD and YOLOv5 classifiers. All in all, this project has successfully completed the basic function of the vision and voice localization system and it works as expected; meanwhile,  improvements could be done for better performance. 
 
 # 6. References
 [1] O. Braga and O. Siohan, "A Closer Look at Audio-Visual Multi-Person Speech Recognition and Active Speaker Selection," ICASSP 2021 - 2021 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2021, pp. 6863-6867, doi: 10.1109/ICASSP39728.2021.9414160.
@@ -149,3 +205,13 @@ It's relatively hard to measure and present sufficient quantified testing result
 [3] O. Braga, T. Makino, O. Siohan and H. Liao, "End-to-End Multi-Person Audio/Visual Automatic Speech Recognition," ICASSP 2020 - 2020 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2020, pp. 6994-6998, doi: 10.1109/ICASSP40776.2020.9053974.
 
 [4] Ruijie Tao, Zexu Pan, Rohan Kumar Das, Xinyuan Qian, Mike Zheng Shou, and Haizhou Li. 2021. Is Someone Speaking? Exploring Long-term Temporal Features for Audio-visual Active Speaker Detection. In Proceedings of the 29th ACM International Conference on Multimedia (MM '21). Association for Computing Machinery, New York, NY, USA, 3927–3935.
+
+[5] Bochkovskiy, A., Wang, C., & Liao, H.M. (2020). YOLOv4: Optimal Speed and Accuracy of Object Detection. arXiv:2004.10934v1 [cs.CV]. 
+
+[6] KIVRAK, O., & GÜRBÜZ, M. Z. (2022). Yolov3, Yolov4 ve Yolov5 Algoritmalarının Performans karşılaştırması: Kümes Hayvan tanıma i̇çin Bir Vaka çalışması. European Journal of Science and Technology. doi:10.31590/ejosat.1111288
+
+[7] Chung, M., Chou, H., & Lin, C. (2022). Sound localization based on acoustic source using multiple microphone array in an indoor environment. Electronics, 11(6), 890. doi:10.3390/electronics11060890
+
+[8] Tang H., Liao B., & You C. Sound-localizing camera. Retrieved December 10, 2022, from http://people.ece.cornell.edu/land/courses/ece4760/FinalProjects/f2014/ht425/Report/Report/ECE%204760%20Time%20System.html
+
+[9] Owl 3 Data Sheet, Retrieved December 10, 2022, from https://resources.owllabs.com/hubfs/website/pdps/mo3%20datasheet/datasheet_mo3_en.pdf
