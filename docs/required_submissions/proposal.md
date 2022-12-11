@@ -36,15 +36,25 @@ Describe the key tasks in executing your project, and in case of team project de
 
 ### 9.a. Papers
 
-List the key papers that you have identified relating to your project idea, and describe how they related to your project. Provide references (with full citation in the References section below).
+For now, two papers are considered. One for human detection and one for sound source localization.
+
+Human Detection:
+YOLOv4: Optimal Speed and Accuracy of Object Detection
+https://arxiv.org/abs/2004.10934
+
+
+Sound Source Localization:
+Sound localization based on acoustic source using multiple microphone array in an indoor environment.
+https://www.mdpi.com/2079-9292/11/6/890
+
 
 ### 9.b. Datasets
 
-List datasets that you have identified and plan to use. Provide references (with full citation in the References section below).
+Human Detection: The weights of yolov5.pt are used, which is trained with MS COCO dataset.
 
 ### 9.c. Software
 
-List softwate that you have identified and plan to use. Provide references (with full citation in the References section below).
+We will use Python, Anaconda for virtual environments, Raspberry Pi OS, and YOLOv5.
 
 ## 10. References
 
