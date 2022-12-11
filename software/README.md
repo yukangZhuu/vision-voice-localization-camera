@@ -8,7 +8,21 @@ The second part is SSL running on Raspberry Pi Zero, containing relative SSL alg
 
 ## How to Setup Software for this project
 
+Firstly, setup the YOLOv5 on your laptop.
+````
+$ cd ./laptop
+$ pip install -r requirements.txt  # install
+````
 
+Secondly, copy the ./raspberry_pi to your Raspberry Pi Desktop.
+
+You should also setup basic drivers so as to run Respeaker module.
+
+Follow the setup steps [here](https://wiki.seeedstudio.com/ReSpeaker_4_Mic_Array_for_Raspberry_Pi/).
+
+Note that the laptop and Raspberry Pi are using serial communication, so a usb cable is needed.
+
+You should also go to ./laptop/detect_mian.py and ./raspberry_pi/vad_doa_serial.py to change the serial port names.
 
 ## How to Run Software for this project
 
