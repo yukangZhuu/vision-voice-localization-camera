@@ -29,7 +29,7 @@ There are a number of choices for the human detector. Modern detectors usually h
     <img style="border-radius: 0.3125em;
     box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
     width = "300" height = "200"
-    src="../media/figure2.1.png" width = "92%" alt=""/>
+    src="../media/figure2.1.png" width = "80%" alt=""/>
     <br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
@@ -53,7 +53,7 @@ Figure 3.1 shows the overview of the system structure of our device. The device 
     <img style="border-radius: 0.3125em;
     box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
     width = "300" height = "200"
-    src="../media/figure3.1.png" width = "92%" alt=""/>
+    src="../media/figure3.1.png" width = "70%" alt=""/>
     <br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
@@ -73,7 +73,7 @@ Human detection is a key feature of this project. YOLOv5 is used for its high sp
     <img style="border-radius: 0.3125em;
     box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
     width = "300" height = "200"
-    src="../media/figure3.2.png" width = "92%" alt=""/>
+    src="../media/figure3.2.png" width = "80%" alt=""/>
     <br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
