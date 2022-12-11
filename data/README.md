@@ -1,1 +1,1 @@
-Add your project's data to this folder.
+Since our porject is developing a vision and voice localization camera used in real-time scenario, it’s relatively hard to measure and present sufficient quantified testing results for our real-time camera device, so for details, please check out the testing video uploaded to Youtube, find the link on the Home page, or just click [here](https://www.youtube.com/watch?v=_rtZ4ykac9A). And for any information of the software of our project, please check out the /code folder. 
